@@ -5,4 +5,12 @@
 */
 
 // your code
-let sum
+let sum = 0;
+const INITIAL_VALUE = 20;
+let counter = 1;
+while (counter <= INITIAL_VALUE) {
+    if (counter % 2 !== 0) {
+        sum += counter;
+    }
+    counter++;
+}
