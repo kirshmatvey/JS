@@ -14,5 +14,9 @@ includesElement([1, 2, 3], 2)  // должен вернуть `true`.
 */
 
 function includesElement(someArray, element) {
-    return someArray.includes(element)
+    for (let i = 0; i < someArray.length; i++) {
+        if (someArray[i] === element) {
+            return true
+        }
+    }
 }
