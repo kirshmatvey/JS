@@ -19,4 +19,5 @@ function includesElement(someArray, element) {
             return true
         }
     }
+    return false
 }
