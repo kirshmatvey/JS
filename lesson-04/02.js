@@ -18,10 +18,9 @@
 function findUniqueElements(someArray, uniqueElements) {
     let uniqueElementArray = [];
     for (let i = 0; i < someArray.length; i++) {
-        if (uniqueElements.indexOf(someArray[i]) !== -1) {
+        if (includesElement(uniqueElements, someArray[i])) {
             uniqueElementArray.push(someArray[i]);
         }
     }
-
     return uniqueElementArray;
 }
