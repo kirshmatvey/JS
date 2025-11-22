@@ -17,3 +17,26 @@ const WEB_TECH_IMAGES = [
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/c8a1f4a6-1337-4899-bdfd-a8c9c7bb806a_css-magic-logo.jpg',
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg',
 ]
+
+const image = document.getElementById('web-tech-image')
+
+const prevButton = document.getElementById('prev-button')
+const nextButton = document.getElementById('next-button')
+
+prevButton.addEventListener('click', function () {
+  if (WEB_TECH_IMAGES.indexOf(image.src) === 0) {
+    image.src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - 1]
+  } else {
+    image.src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.indexOf(image.src) - 1]
+  }
+})
+nextButton.addEventListener('click', function () {
+  if (WEB_TECH_IMAGES.indexOf(image.src) === WEB_TECH_IMAGES.length - 1) {
+    image.src = WEB_TECH_IMAGES[0]
+  } else {
+    image.src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.indexOf(image.src) + 1]
+  }
+})
+
+
+
