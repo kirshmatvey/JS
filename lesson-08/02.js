@@ -4,7 +4,7 @@
  */
 
 function isNumeric(str) {
-    return String(Number(str)) === str;
+    return typeof Number(str) === 'number' && Number.isNaN(Number(str)) === false;
 }
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
